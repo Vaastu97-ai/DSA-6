@@ -23,16 +23,28 @@ int main()
     printf("Enter the Target :");
     scanf("%d" , &target);
 
+    //ingore the duplicate values in arrray
+    int used[20]={0};
+
     //core logic
-    for (int i=0 ; i<n ; i++){
+    for (int i=0 ; i<n ; i++){ 
+
         for (int j=i+1; j<n ; j++){
+
             if(arr[i] + arr[j] == target){
                 printf("The pair is: %d and %d\n", arr[i], arr[j]);
-                return 0;
+                break;
+            }
+            else {
+                printf("no pair found to provide your sum:%i\n" , target);
+                break;
+            }
+            
+                
             }
 
         }
-    }
+    
 
             
 
